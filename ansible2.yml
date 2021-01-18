@@ -7,7 +7,7 @@
     yum: name=httpd state=absent
 
   - name: Copy the file intp dest
-    copy: src=/root/Bullet.txt  dest=/etc/Jenkins1/
+    copy: src=/root/Bullet.txt  dest=/etc/Jenkins1/Bullet2.txt
 
   - name: install multiple directories
     file: path="/tmp/{ { items } }" state=directory
