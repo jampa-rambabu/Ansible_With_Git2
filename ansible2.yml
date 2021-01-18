@@ -8,9 +8,9 @@
 
 
   - name: install multiple directories
-    file: path="/tmp/{ { item } }" state=directory
+    file: path="/tmp/{{ item }}" state=directory
     loop:
-         - jenkins1
-         - jenkins2
-         - jenkins3
+         - jenkins11
+         - jenkins21
+         - jenkins31
 
