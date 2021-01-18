@@ -5,12 +5,14 @@
   tasks:
   - name: Remove the Httpd server
     yum: name=httpd state=absent
+
+  - name: Copy the file intp dest
+    copy: src=/root/Bullet.txt  dest=/etc/Jenkins1/
+
   - name: install multiple directories
     file: path="/tmp/{ { items } }" state=directory
     loop:
          - jenkins1
          - jenkins2
          - jenkins3
-  - name: copy the file into diffrent location
-    copy: src=Bullet.txt  dest=/etc/Jenkins1/
 
