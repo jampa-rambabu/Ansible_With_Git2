@@ -1,0 +1,16 @@
+---
+- name: Removing the ansible configurations
+  hosts: Raambabu
+  become: true
+  tasks:
+  - name: Remove the Httpd server
+    yum: name=httpd state=absent
+  - name: install multiple directories
+    file: path="/tmp/{ { items } }" state=directory
+    loop:
+         - jenkins1
+         - jenkins2
+         - jenkins3
+  - name: copy the file into diffrent location
+    copy: src=Bullet.txt  dest=/etc/Jenkins1/
+
