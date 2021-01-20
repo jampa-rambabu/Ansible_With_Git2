@@ -1,6 +1,6 @@
 ---
 - name: Removing the ansible configurations
-  hosts: Raambabu
+  hosts: webservers
   become: true
   tasks:
   - name: Remove the Httpd server
